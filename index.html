@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 60px 250px 150px 60px;
+  grid-template-areas:
+    "box1 box2 box2 box2"
+  "box3 box3 box3 box3"
+  "box4 blank box7 box7"
+  "box5 box5 box5 box5";
+}
+
+.box1 {
+  grid-area: box1;
+  background: #172238;
+}
+
+.box2 {
+  grid-area: box2;
+  background: #ef334b;
+}
+
+.box3 {
+  grid-area: box3;
+  background: #4e87c5;
+}
+
+.box4 {
+  grid-area: box4;
+  background: #26374f;
+}
+
+.box5 {
+  grid-area: box5;
+  background: #ffd366;
+}
+
+.box6 {
+  background: #4cba9b;
+}
+
+.box7 {
+  grid-area: box7;
+  background: #b8e3df;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.blank {
+  grid-area: blank;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 60px 95px 95px 45px 45px;
+    grid-template-areas:
+      "box1 box1 box1"
+      "box3 box3 box3"
+      "box2 box4 box4"
+      "box2 box5 box5"
+      "box2 box6 box7";
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 40px 100px 100px 50px 50px 50px;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6"
+      "box7";
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<div class="box1">HEADER</div>
+<div class="box2">MENU</div>
+<div class="box3">HERO</div>
+<div class="box4">MAIN</div>
+<div class="box5">BANNER</div>
+<div class="box6">EXTRA</div>
+<div class="box7">IMAGE</div>
+
+    </div>
+</body>
+</html>
